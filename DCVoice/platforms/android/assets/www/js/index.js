@@ -191,7 +191,7 @@ function recordAndSend() {
             TTS.speak({
                 text: r.response,
                 locale: 'en-US',
-                rate: 1.5
+                rate: 1.0
             }, function (success) {
                      // Do Something after success
                      // You will hear a voice 
@@ -241,7 +241,7 @@ function recordAndSend() {
 
 }
 
-//---(recordAudio) Function to start and stop recording on device and (sendserver Function) after sometime send it to the server---//Begin
+//---(recordAudio) Function to start and stop recording on device and (sendserver Function) after sometime send it to the server---//End
 
 
 //------------------||Function to start audio recording and stop||------------------//Begin
@@ -252,9 +252,6 @@ startButton.addEventListener('click', startFun);
 var stopButton = document.querySelector('div .stop');
 stopButton.addEventListener('click', stopFun);
 
-//------------------||Function to start audio recording and stop||------------------//End
-
-
 function startFun() {
     stop = 0;
     recordAndSend();
@@ -263,3 +260,7 @@ function startFun() {
 function stopFun() {
     stop = 1;
 }
+
+//------------------||Function to start audio recording and stop||------------------//End
+
+
