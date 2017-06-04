@@ -18,7 +18,7 @@ const spawn = require('child_process').spawn;
 // diskStorage is multer method to full control on storing files to disk
 var storage =   multer.diskStorage({
   destination: function (req, file, callback) {
-    callback(null, '/Users/a0m0195/Project_DCVoice/Server/Files');
+    callback(null, '/Users/a0m0195/Project/Server/Files');
   },
   filename: function (req, file, callback) {
     callback(null, file.fieldname+'.wav');
