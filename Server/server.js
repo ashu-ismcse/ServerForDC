@@ -11,9 +11,7 @@ var app = express();
 
 var fileSystem = require("fs");
 var path = require('path');
-
 var exec = require('child_process').exec;
-const spawn = require('child_process').spawn;
 
 // diskStorage is multer method to full control on storing files to disk
 var storage =   multer.diskStorage({
@@ -35,67 +33,61 @@ app.post('/',function(req,res){
 
   // --- '/' -> path to which middleware function applies
 
+
+
+  //--------------||File uploading Function||----------------//
+
   upload(req,res,function(err) {
     if(err) {
       console.log(err)
       return res.end("Error uploading file.");
     }
 
-
-    // var myscript = exec('echo "y" | ffmpeg -i Files/file.wav -acodec pcm_u8 -ar 22050 Files/song.wav','python Files/speech.py');
-    // myscript.stdout.on('data',function(data){
-    //   console.log(data); // process output will be displayed here
-    // });
-    // myscript.stderr.on('data',function(data){
-    //   console.log(data); // process error output will be displayed here
-    // });
-
+    //-----------------|| Execute bash commands || -----------------//
     var task1 = exec('echo "y" | ffmpeg -i Files/file.wav -acodec pcm_u8 -ar 22050 Files/song.wav', function (error, stdout, stderr) {
-    var task2 = exec('python Files/speech.py', function (error, stdout, stderr) {
-    console.log('stdout: ' + stdout);
-    console.log('stderr: ' + stderr);
-    if (error === null) {
-        
 
-      var filePath = path.join(__dirname, '/Files/Output.txt');
+      //---------------------|| Nested for sequential Execution ||---------------------//
+      var task2 = exec('python Files/speech.py', function (error, stdout, stderr) {
 
-      var stat = fileSystem.statSync(filePath);
+        // console.log('stdout: ' + stdout);
+        // console.log('stderr: ' + stderr);
 
-      res.writeHead(200, {
-        'Content-Type': 'text/txt',
-        'Content-Length': stat.size,
-        'Content-Disposition': 'attachment; filename=say'
-        });
+        //--------------------|| Execute if no Error Found ||---------------------//
 
-      var readStream = fileSystem.createReadStream(filePath);
-      // We replaced all the event handlers with a simple call to readStream.pipe()
-      readStream.on('open', function () {
-      console.log(stat.size);
-      // This just pipes the read stream to the response object (which goes to the client)
-      readStream.pipe(res);
-      },function(err) {
-        res.end("File is uploaded");
+        if (error === null) {
+          
+
+            var filePath = path.join(__dirname, '/Files/Output.txt');
+
+
+
+            var stat = fileSystem.statSync(filePath);
+            // To check if filepath exists
+
+            res.writeHead(200, {
+              'Content-Type': 'text/txt',
+              'Content-Length': stat.size,
+              'Content-Disposition': 'attachment; filename=say'
+            });
+
+            var readStream = fileSystem.createReadStream(filePath);
+            // We replaced all the event handlers with a simple call to readStream.pipe()
+            readStream.on('open', function () {
+              console.log(stat.size);
+              // This just pipes the read stream to the response object (which goes to the client)
+              readStream.pipe(res);
+            },function(err) {
+              res.end("File is uploaded");
+            });
+
+
+        }
+
       });
 
 
-    }
-  });
+    });
 
-
-  });
-
-
-
-  //   var PythonShell = require('python-shell');
-
-  // PythonShell.run('Files/speech.py', function (err) {
-  //   if (err) throw err;
-  // console.log('finished');
-  // });
-
-
-    
-    
   });
 });
 
