@@ -1,6 +1,6 @@
 # Server Side
 
-This Folder contains all the files which are on server side (No relation with Cordova folder)
+This Folder contains all the files which are on server side (No direct relation with Cordova folder)
 
 ## server.js
 ```
@@ -10,7 +10,7 @@ This is a node.js files which :
 	- Executes bash commands for conversion of recieved sound file(file.wav) to correct wav file (song.wav)
 		(The file recieved from android device is not correct wav format thats' why this conversion is needed)
 	- Executes python script for speech recognition 
-	
+
 ```
 
 ## Files Folder 
