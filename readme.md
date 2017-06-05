@@ -9,7 +9,7 @@ The Project contains two Directories :
 1. DCVoice
 	- This folder is Cordova Project which is deployed in an android 	  	device.  
 2. Server 
-	- This folder contains Server scripting and Files folder which have   	Speech recognition python script and other temporary files.
+	- This folder contains Server side scripting and Files folder which   	have Speech recognition python script and other temporary files.
 
 ### Technologies Used
 
