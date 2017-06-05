@@ -1,4 +1,4 @@
-# Project Title
+# DCVoice
 
 This Project is for replacing third party app VoCollect used in Distribution Centres.
 
@@ -11,7 +11,7 @@ The Project contains two Directories :
 2. Server 
 	- This folder contains Server scripting and Files folder which have   	Speech recognition python script and other temporary files.
 
-###	Technologies Used
+### Technologies Used
 
 ```
 	1. For Making android app cordova is used (Inside Folder DCVoice)
