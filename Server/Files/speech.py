@@ -17,7 +17,7 @@ try:
     st = r.recognize_google(audio)
     print(st)
     if(st == "hello" or st == "hi" or st == "hello there"):
-    	result = "Hello There! Please say one"
+    	result = "Hi There! Please say one"
     elif(st == "one" or st == "1"):
     	result = "please say two"
     elif(st == "two" or st == "2"):
@@ -27,7 +27,7 @@ try:
     elif(st == "bangalore" or st == "Bangalore"):
     	result = "Now say your password"
     elif(st == "walmart" or st == "Walmart"):
-    	result = "Congratulations you are successfully logged in!"
+    	result = "Congratulations you are successfully logged in! To Begin picking say Ready!"
     elif(st == "bye" or st == "Bye"):
         result = "bye"
     else :
