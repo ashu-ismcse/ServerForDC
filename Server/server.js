@@ -19,7 +19,7 @@ var storage =   multer.diskStorage({
     callback(null, '/Users/a0m0195/Project/Server/Files');
   },
   filename: function (req, file, callback) {
-    callback(null, file.fieldname+'.wav');
+    callback(null, file.fieldname+'.aac');
   }
 });
 
@@ -44,7 +44,7 @@ app.post('/',function(req,res){
     }
 
     //-----------------|| Execute bash commands || -----------------//
-    var task1 = exec('echo "y" | ffmpeg -i Files/file.wav -acodec pcm_u8 -ar 22050 Files/song.wav', function (error, stdout, stderr) {
+    var task1 = exec('echo "y" | ffmpeg -i Files/file.aac -ar 16000 -ac 1 -c:v libx264 Files/song.wav', function (error, stdout, stderr) {
 
       //---------------------|| Nested for sequential Execution ||---------------------//
       var task2 = exec('python Files/speech.py', function (error, stdout, stderr) {
