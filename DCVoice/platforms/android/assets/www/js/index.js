@@ -135,7 +135,7 @@ function recordAndSend() {
         if(stop){
            return; 
         }
-        var src = "myrec.wav";
+        var src = "myrec.aac";
 
         // new media object mediaRec
         var mediaRec = new Media(src,
@@ -164,14 +164,14 @@ function recordAndSend() {
     //----------------- send to server function -----------// Begin
    
         function sendserver() {
-        var fileURL = "/storage/emulated/0/myrec.wav"
+        var fileURL = "/storage/emulated/0/myrec.aac"
         var ur = "http://192.168.43.112:8000/";
         //var uri = encodeURI("http://posttestserver.com/post.php");
         var options = new FileUploadOptions();
         
         options.fileKey = "file";
         options.fileName = "file";
-        options.mimeType = "audio/m4a";
+        options.mimeType = "audio/aac";
         options.httpMethod = "POST";
         options.chunkedMode = false;
 

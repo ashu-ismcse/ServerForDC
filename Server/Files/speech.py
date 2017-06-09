@@ -20,7 +20,7 @@ try:
     	result = "Hi There! Please say one"
     elif(st == "one" or st == "1"):
     	result = "please say two"
-    elif(st == "two" or st == "2"):
+    elif(st == "two" or st == "2" or st == "to" or st == "too"):
     	result = "Now say your username"
     elif(st == "three" or st == "3"):
     	result = "Now say your username" 
