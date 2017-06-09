@@ -43,7 +43,7 @@ app.post('/',function(req,res){
       return res.end("Error uploading file.");
     }
 
-    //-----------------|| Execute bash commands || -----------------//
+    //-----------------|| Execute bash commands to convert sound file to 16000 sampling rate and mono channel with 256k bit rate|| -----------------//
     var task1 = exec('echo "y" | ffmpeg -i Files/file.aac -ar 16000 -ac 1 -c:v libx264 Files/song.wav', function (error, stdout, stderr) {
 
       //---------------------|| Nested for sequential Execution ||---------------------//
@@ -84,9 +84,10 @@ app.post('/',function(req,res){
       //   }
 
       // });
-
+                      //-------- bash command to remove silences part from an audio file--------//
        var task3 = exec('ffmpeg -i Files/song.wav -af silenceremove=0:0:0:-1:1:-40dB -ac 1 Files/final.wav -y',function(error , stdout , stderr) {   
 
+                      //----------- bash command to perform speech to text using our model -----------------//
           var task2 = exec('pocketsphinx_continuous -hmm /Users/a0m0195/Model_1/model_parameters/EXPT.ci_cont -lm /Users/a0m0195/Model_1/etc/my.lm  -dict /Users/a0m0195/Model_1/etc/my.dic -kws_delay 3 -remove_noise yes -infile /Users/a0m0195/Project/Server/Files/final.wav > /Users/a0m0195/Project/Server/Files/input.txt',function(err , stdout , stderr) {
 
           
