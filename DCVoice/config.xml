@@ -24,6 +24,7 @@
     </platform>
     <engine name="android" spec="^6.2.3" />
     <plugin name="cordova-plugin-bluetooth-serial" spec="^0.4.7" />
+    <plugin name="cordova-plugin-device" spec="^1.1.6" />
     <plugin name="cordova-plugin-file-transfer" spec="^1.6.3" />
     <plugin name="cordova-plugin-media" spec="^3.0.1" />
     <plugin name="cordova-plugin-tts" spec="^0.2.3" />

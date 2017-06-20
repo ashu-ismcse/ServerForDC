@@ -141,7 +141,7 @@ function recordAndSend() {
         var mediaRec = new Media(src,
             // success callback
             function() {
-                //alert("recordAudio():Audio Success");
+                alert("recordAudio():Audio Success");
             },
 
             // error callback
@@ -155,9 +155,20 @@ function recordAndSend() {
 
         // Stop recording after 3 seconds
         setTimeout(function() {
-            mediaRec.stopRecord();mediaRec.release(); 
-        }, 3000);
+            mediaRec.stopRecord();
+        }, 6000);
 
+        // -----------------------------------------TRY----------------------------------------//
+
+
+
+
+
+
+
+
+
+        // -----------------------------------------TRY----------------------------------------//
     //----------------- record audio function ----------// End
 
 
@@ -196,14 +207,14 @@ function recordAndSend() {
                      // Do Something after success
                      // You will hear a voice 
                     // alert(r.response);
-                     var bye = r.response.toString();
+                    // var bye = r.response.toString();
                     //  alert(bye);
-                     if(bye === "bye") {
-                         return;
-                     }
-                     else {
-                         setTimeout(recordAndSend , 500);
-                     }
+                     // if(bye === "bye") {
+                     //     return;
+                     // }
+                     // else {
+                     //     setTimeout(recordAndSend , 500);
+                     // }
             }, function (reason) {
                      // Handle the error case
                     alert(reason);
@@ -235,7 +246,7 @@ function recordAndSend() {
 
     setTimeout(function() {
             sendserver(); 
-        }, 4000);
+        }, 6500);
 
     //----------------- send to server function -----------// End   
 
@@ -247,7 +258,7 @@ function recordAndSend() {
 //------------------||Function to start audio recording and stop||------------------//Begin
 
 var startButton = document.querySelector('div .start');
-startButton.addEventListener('click', startFun);
+startButton.addEventListener('click', recordAndSend);
 
 var stopButton = document.querySelector('div .stop');
 stopButton.addEventListener('click', stopFun);

@@ -1,0 +1,5 @@
+Technologies used in DCVoice 
+
+App is made using Ionic 
+Server Side scripting is done using Nodejs
+For voice recognition pocketsphinx is used  

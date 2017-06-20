@@ -1,0 +1,78 @@
+DCVoice 
+
+Script for Demonstration
+
+
+User 🗣 : Start 
+
+
+
+Server 📱: Please say Password
+
+User 🗣 : Password (100 | 101 | 102 | 103) 
+
+Server 📱: (Correct Password) Successfully Logged in .. To hear subcentre choices please say subcenter
+Server 📱: (Wrong Password) Please Repeat
+
+
+
+User 🗣 : Subcenter
+
+Server 📱: Subcenter choices are : 196 ... 214 ... 507 , Please respond with subcenter number
+
+User 🗣 : Subcenter Number (196 | 214 | 507)
+
+
+
+Server 📱: Respond with three digit work area
+
+User 🗣 : 440
+
+
+
+Server 📱: To begin Picking say Ready
+
+User 🗣 : Ready 
+
+
+
+Server 📱: Use the pallet jack present at module 564 ....Proceed to slot 123 ..... Say last 3 digit of 			   item UPC
+User 🗣 : 456
+
+
+
+Server 📱: Pick 4
+
+User 🗣 : (User Confirms with 4) 4
+
+
+
+Server 📱: Proceed to slot 125 and say last 3 digits of item UPC
+
+User 🗣 : 656
+
+
+
+Server 📱: Pick 5
+
+User User 🗣 : (User responds with 2) 2
+
+
+
+Server 📱: 3 Short ...Proceed to slot 126 and say last 3 digits of item UPC
+
+User 🗣 : 756
+
+
+
+Server 📱 : pick 6
+
+User 🗣 : (User Confirms with 6) 6
+
+
+
+Server 📱 : You have completed the trip, are there any corrections?
+
+User 🗣 : ( Yes or No ) No
+
+Server 📱 : Trip Complete.... Chase trip created

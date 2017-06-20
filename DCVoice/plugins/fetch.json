@@ -62,5 +62,21 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "ro.martinescu.audio": {
+        "source": {
+            "type": "registry",
+            "id": "https://github.com/petrica/wav-recorder.git"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-device": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-device"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

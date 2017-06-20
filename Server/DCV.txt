@@ -1,0 +1,4 @@
+Tools used are -
+
+App is made using Ionic and Cordova Plugins (Will be deployed in TC70)
+Sphinx is used for Voice Recognition 

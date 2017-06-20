@@ -18,6 +18,9 @@
     <feature name="Toast">
         <param name="android-package" value="nl.xservices.plugins.Toast" />
     </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
     <feature name="BluetoothSerial">
         <param name="android-package" value="com.megster.cordova.BluetoothSerial" />
     </feature>

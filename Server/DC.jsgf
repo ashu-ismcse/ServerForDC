@@ -1,0 +1,12 @@
+#JSGF V1.0;
+
+grammar DCVoice;
+
+<number> = ONE | TWO | THREE | FOUR | FIVE | SIX | SEVEN | EIGHT | NINE | ZERO ;
+<combination> = <number> <number> <number> <number>* ;
+<greet> = HI | HELLO;
+<ready> = READY;
+<repeat> = REPEAT;
+<summary> = SUMMARY;
+<confirm> = SUB CENTER;
+
