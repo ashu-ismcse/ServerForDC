@@ -1,7 +1,5 @@
 # DCVoice
 
-This Project is for replacing third party app VoCollect used in Distribution Centres.
-
 ## Getting Started
 
 The Project contains two Directories :
