@@ -2,7 +2,7 @@
 
 This Folder contains all the files which are on server side (No direct relation with Cordova folder)
 
-## server.js
+## FinalServer.js
 ```
 This is a node.js file which :
 	- creates server using express framework 
@@ -12,12 +12,6 @@ This is a node.js file which :
 	- Executes python script for speech recognition 
 
 ```
-
-## sphinxServer.js
-```
-This uses PocketSphinx for speech recognition unlike server.js which uses Google api for speech recognition.
-```
-
 ## Files Folder 
 	
 ``` 
